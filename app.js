@@ -3,6 +3,20 @@
 
 Product.allProducts = [];
 
+var arrayOfItemsSelected = [];
+
+
+function moveItemsIntoArray(name, quantity) {
+  var arrayOfItemDetails = [];
+  // this.quantity = quantity;
+  // console.log(quantity);
+  // this.name = name;
+
+  
+  arrayOfItemDetails.push(name);
+  arrayOfItemDetails.push(quantity);
+  arrayOfItemsSelected.push(arrayOfItemDetails);
+}
 
 function Product(filepath, name) {
   this.filepath = filepath;
@@ -58,12 +72,21 @@ var allItems = document.getElementById('allItems');
 allItems.addEventListener('submit', itemsHaveBeenAdded);
 
 
+
 function itemsHaveBeenAdded(event) {
   event.preventDefault();
   console.log('log has been fired');
+  console.log(event.target);
+  console.dir(event.target[1].value);
+  var itemQuantity = event.target[2].value;
+  var item = event.target[1].value;
+  moveItemsIntoArray(item, itemQuantity);
   // var viewCartMessageText = 'Click here to view your cart!';
   // var messagePlusLinkDisplayed = viewCartMessageText.link("cart.html");
   // document.getElementById("webPage").innerHTML = messagePlusLinkDisplayed;
   // alert('Your items have been added to the cart successfully!');
   // document.getElementById("add-to-cart").innerHTML = 'Items added successfully. Click the link below to view your cart!';
   }
+
+
+
