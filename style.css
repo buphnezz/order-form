@@ -1,0 +1,14 @@
+li {
+  list-style-type: none;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+
+div button {
+  background: white
+}
+.focus:focus {
+  background:#f81706;
+}
