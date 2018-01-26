@@ -11,7 +11,7 @@
 
 function itemsHaveBeenAdded() {
   var viewCartMessageText = 'Click here to view your cart!';
-  var messagePlusLinkDisplayed = viewCartMessageText.link("https://www.shoppingcartitems.com");
+  var messagePlusLinkDisplayed = viewCartMessageText.link("cart.html");
   document.getElementById("webPage").innerHTML = messagePlusLinkDisplayed;
   alert('Your items have been added to the cart successfully!');
   document.getElementById("add-to-cart").innerHTML = 'Items added successfully. Click the link below to view your cart!';
