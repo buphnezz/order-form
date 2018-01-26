@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
- 
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
@@ -30,12 +30,13 @@
     <option value20="Select">Wine Glass</option>
   </select>
   <fieldset>
-  
-  <label for="itemQuantity">Item Quantity:</label>
-  <input name="itemQuantity" type="number" />
+    <label for="itemQuantity">Item Quantity:</label>
+    <input name="itemQuantity" type="number" />
   </fieldset>
-  
+  <!-- <a id= "webPage" onClick="displayLink"></a> -->
+  <!-- </a>"https://www.w3schools.com/html/">Visit our HTML tutorial</a> -->
   <button onClick="itemsHaveBeenAdded()" id="add-to-cart" type="submit">Add to Cart</button>
+  <li><a href="cart.html" id="webPage" onClick="displayLink">Click here to view your cart!</a></li>
   <script src="app.js"></script>
 </body>
 </html>
