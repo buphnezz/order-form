@@ -3,28 +3,28 @@
 
 Product.allProducts = [];
 
-var arrayOfItemsSelected = [];
+let arrayOfItemsSelected = [];
 
 
-function moveItemsIntoArray(name, quantity) {
-  var arrayOfItemDetails = [];
+const moveItemsIntoArray = (name, quantity) => {
+  let arrayOfItemDetails = [];
   // this.quantity = quantity;
   // console.log(quantity);
   // this.name = name;
 
-  
+
   arrayOfItemDetails.push(name);
   arrayOfItemDetails.push(quantity);
   arrayOfItemsSelected.push(arrayOfItemDetails);
-}
+};
 
-function Product(filepath, name) {
+const Product = (filepath, name) => {
   this.filepath = filepath;
   this.name = name;
 
   // Product.allProducts.push(this);
   // name.push(this.name);
-}
+};
 
 new Product('img/bag.jpg', 'R2D2 BAG');
 new Product('img/banana.jpg', 'Banana Slicer');
@@ -48,7 +48,7 @@ new Product('img/water-can.jpg', 'Water-Can');
 new Product ('img/wine-glass.jpg','Wine-Glass');
 
 
-// var imgEl = document.getElementById('img');
+// let imgEl = document.getElementById('img');
 // console.log(imgEl);
 // imgEl.src = Product.allProducts.filepath;
 // imgEl.alt = Product.allProducts.name;
@@ -63,30 +63,27 @@ new Product ('img/wine-glass.jpg','Wine-Glass');
 // when item is selected from drop down display a prompt that accepts a number type input.
 // store that user number in an array
 // create a button called Add to Cart
-// allow user to select Add to Cart submit button 
-// store user input into a variable
-// clear the individual input numbers for each image but still keep the total number variable.
+// allow user to select Add to Cart submit button
+// store user input into a letiable
+// clear the individual input numbers for each image but still keep the total number letiable.
 // create item constructor with filepath and name  (use the constructor we already have).
-var allItems = document.getElementById('allItems');
+let allItems = document.getElementById('allItems');
 
 allItems.addEventListener('submit', itemsHaveBeenAdded);
 
 
 
-function itemsHaveBeenAdded(event) {
+const itemsHaveBeenAdded = (event) => {
   event.preventDefault();
   console.log('log has been fired');
   console.log(event.target);
   console.dir(event.target[1].value);
-  var itemQuantity = event.target[2].value;
-  var item = event.target[1].value;
+  let itemQuantity = event.target[2].value;
+  let item = event.target[1].value;
   moveItemsIntoArray(item, itemQuantity);
-  // var viewCartMessageText = 'Click here to view your cart!';
-  // var messagePlusLinkDisplayed = viewCartMessageText.link("cart.html");
+  // let viewCartMessageText = 'Click here to view your cart!';
+  // let messagePlusLinkDisplayed = viewCartMessageText.link("cart.html");
   // document.getElementById("webPage").innerHTML = messagePlusLinkDisplayed;
   // alert('Your items have been added to the cart successfully!');
   // document.getElementById("add-to-cart").innerHTML = 'Items added successfully. Click the link below to view your cart!';
-  }
-
-
-
+};
